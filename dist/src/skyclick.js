@@ -5,22 +5,23 @@ class Skyclick {
     constructor(URL) {
         this.SERVER_URL = URL;
     }
-    setH5PActivity(h5pComponentID, skyclickActivityID, teacherID, createdAt, active = true) {
+    setH5PActivity(h5pComponentID, skyclickHomeworkID, skyclickActivityID, skyclickTeacherID, createdAt, active = true) {
         const result = {
-            activityID: 123,
-            h5pComponentID: h5pComponentID,
-            skyclickActivityID: skyclickActivityID,
-            teacherID: teacherID,
+            h5pActivityID: 123,
+            skyclickHomeworkID,
+            h5pComponentID,
+            skyclickActivityID,
+            skyclickTeacherID,
             createdAt: createdAt,
             active: active
         };
         return result;
     }
-    setH5PAssignation(userID, activityID, startDate) {
+    setH5PAssignation(skyclickUserID, skyclickActivityID, startDate) {
         const result = {
-            assinationID: 765,
-            activityID: activityID,
-            userID: userID,
+            h5pAssinationID: 765,
+            skyclickActivityID,
+            skyclickUserID,
             startDate: startDate,
         };
         return result;

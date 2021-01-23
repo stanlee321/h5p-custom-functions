@@ -5,16 +5,18 @@ const client: Skyclick  = new Skyclick("localhost:3000")
 // case 0
 const args = {
     h5pComponentID: "1234v333",
+    skyclickHomeworkID : 123445,
     skyclickActivityID: 444,
-    teacherID: 1234,
+    skyclickTeacherID: 1234,
     createdAt: new Date(2012, 0, 1).toDateString(),
     active : true,
 }
 
 
 const newActiviy = client.setH5PActivity(args.h5pComponentID,
+                                    args.skyclickHomeworkID,
                                     args.skyclickActivityID,
-                                    args.teacherID,
+                                    args.skyclickTeacherID,
                                     args.createdAt,
                                     args.active)
 
@@ -22,13 +24,13 @@ console.log("newActiviy: ", newActiviy)
 
 // case 1
 const argsAssing = {
-    userID: 12344,
-    activityID: 444,
+    skyclickUserID: 12344,
+    skyclickActivityID: 444,
     startDate: new Date(2012, 0, 1).toDateString()
 }
 
-const newActiviyAssignation = client.setH5PAssignation(argsAssing.userID,
-                                    argsAssing.activityID,
+const newActiviyAssignation = client.setH5PAssignation(argsAssing.skyclickUserID,
+                                    argsAssing.skyclickActivityID,
                                     argsAssing.startDate)
 
 console.log("newActiviyAssignation: ", newActiviyAssignation)

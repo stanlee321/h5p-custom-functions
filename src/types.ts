@@ -1,20 +1,21 @@
-export type TActivity = {
-    activityID : number; // PK 
-    h5pComponentID: string;
+export type TH5PActivity = {
+    h5pActivityID : number; // PK 
+    h5pComponentID: string; // Resource H5P
+    skyclickHomeworkID: number; // skyclick homework ID
     skyclickActivityID: number; //  skyclick activity ID
-    teacherID : number;  // skyclick User ID who created the activity
+    skyclickTeacherID : number;  // skyclick User ID who created the activity
     createdAt : string; // ISO Format datetime "2011-12-19T15:28:46.493Z"
     active : boolean;   // default true
 }
 
-export type TAssignation = {
-    assinationID: number; // PK
-    userID: number; // Skycklick user id
-    activityID:  number; // Skyclick ActivityID
+export type TH5PAssignation = {
+    h5pAssinationID: number; // PK
+    skyclickUserID: number; // Skycklick user id
+    skyclickActivityID:  number; // Skyclick ActivityID
     startDate: string //  When this activity was assigned
 }
 
-export type TInteraction = {
+export type TH5PInteraction = {
     interactionID : number; // PK
     userID: number, // Skycklick user id
     activityID:  number; // Skyclick ActivityID

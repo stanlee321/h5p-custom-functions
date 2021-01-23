@@ -5,28 +5,29 @@ var Skyclick = /** @class */ (function () {
     function Skyclick(URL) {
         this.SERVER_URL = URL;
     }
-    Skyclick.prototype.setActivity = function (h5pComponentID, skyclickActivityID, teacherID, createdAt, active) {
+    Skyclick.prototype.setH5PActivity = function (h5pComponentID, skyclickHomeworkID, skyclickActivityID, skyclickTeacherID, createdAt, active) {
         if (active === void 0) { active = true; }
         var result = {
-            activityID: 123,
+            h5pActivityID: 123,
+            skyclickHomeworkID: skyclickHomeworkID,
             h5pComponentID: h5pComponentID,
             skyclickActivityID: skyclickActivityID,
-            teacherID: teacherID,
+            skyclickTeacherID: skyclickTeacherID,
             createdAt: createdAt,
             active: active
         };
         return result;
     };
-    Skyclick.prototype.setAssignation = function (userID, activityID, startDate) {
+    Skyclick.prototype.setH5PAssignation = function (skyclickUserID, skyclickActivityID, startDate) {
         var result = {
-            assinationID: 765,
-            activityID: activityID,
-            userID: userID,
+            h5pAssinationID: 765,
+            skyclickActivityID: skyclickActivityID,
+            skyclickUserID: skyclickUserID,
             startDate: startDate
         };
         return result;
     };
-    Skyclick.prototype.setInteraction = function (userID, activityID, lastInteraction, stayTime, aproved, metadata) {
+    Skyclick.prototype.setH5PInteraction = function (userID, activityID, lastInteraction, stayTime, aproved, metadata) {
         var result = {
             interactionID: 123,
             activityID: activityID,

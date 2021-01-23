@@ -5,20 +5,21 @@ var client = new skyclick_1["default"]("localhost:3000");
 // case 0
 var args = {
     h5pComponentID: "1234v333",
+    skyclickHomeworkID: 123445,
     skyclickActivityID: 444,
-    teacherID: 1234,
+    skyclickTeacherID: 1234,
     createdAt: new Date(2012, 0, 1).toDateString(),
     active: true
 };
-var newActiviy = client.setActivity(args.h5pComponentID, args.skyclickActivityID, args.teacherID, args.createdAt, args.active);
+var newActiviy = client.setH5PActivity(args.h5pComponentID, args.skyclickHomeworkID, args.skyclickActivityID, args.skyclickTeacherID, args.createdAt, args.active);
 console.log("newActiviy: ", newActiviy);
 // case 1
 var argsAssing = {
-    userID: 12344,
-    activityID: 444,
+    skyclickUserID: 12344,
+    skyclickActivityID: 444,
     startDate: new Date(2012, 0, 1).toDateString()
 };
-var newActiviyAssignation = client.setAssignation(argsAssing.userID, argsAssing.activityID, argsAssing.startDate);
+var newActiviyAssignation = client.setH5PAssignation(argsAssing.skyclickUserID, argsAssing.skyclickActivityID, argsAssing.startDate);
 console.log("newActiviyAssignation: ", newActiviyAssignation);
 // case 2 
 var argsInteraction = {
@@ -32,7 +33,7 @@ var argsInteraction = {
         key2: "val2"
     })
 };
-var newInteraction = client.setInteraction(argsInteraction.userID, argsInteraction.activityID, argsInteraction.lastInteraction, argsInteraction.stayTime, argsInteraction.aproved, argsInteraction.metadata);
+var newInteraction = client.setH5PInteraction(argsInteraction.userID, argsInteraction.activityID, argsInteraction.lastInteraction, argsInteraction.stayTime, argsInteraction.aproved, argsInteraction.metadata);
 console.log("newInteraction: ", newInteraction);
 // case 3
 var teacherProfile = client.getTeacherProfile(123);

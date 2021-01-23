@@ -1,5 +1,5 @@
 
-import { TActivity, TAssignation, TInteraction, TSkyclickActivity, TSkyclickUser } from './types';
+import { TH5PActivity, TH5PAssignation, TH5PInteraction, TSkyclickActivity, TSkyclickUser } from './types';
 import { generateName, 
         getRandomInteger, 
         randomDate, 
@@ -17,17 +17,19 @@ class Skyclick {
     }
   
     setH5PActivity(h5pComponentID: string, 
+                    skyclickHomeworkID : number,
                     skyclickActivityID: number,
-                    teacherID: number,
+                    skyclickTeacherID: number,
                     createdAt: string,
                     active:boolean = true
-                    ): TActivity {
+                    ): TH5PActivity {
 
-        const result: TActivity = {
-            activityID: 123,
-            h5pComponentID: h5pComponentID,
-            skyclickActivityID: skyclickActivityID,
-            teacherID: teacherID,
+        const result: TH5PActivity = {
+            h5pActivityID: 123,
+            skyclickHomeworkID,
+            h5pComponentID,
+            skyclickActivityID,
+            skyclickTeacherID,
             createdAt: createdAt,
             active: active
         }
@@ -36,12 +38,12 @@ class Skyclick {
 
     }
 
-    setH5PAssignation(userID: number, activityID: number, startDate: string): TAssignation {
+    setH5PAssignation(skyclickUserID: number, skyclickActivityID: number, startDate: string): TH5PAssignation {
         
-        const result: TAssignation = {
-            assinationID: 765,
-            activityID: activityID,
-            userID: userID,
+        const result: TH5PAssignation = {
+            h5pAssinationID: 765,
+            skyclickActivityID,
+            skyclickUserID,
             startDate: startDate,
         }
 
@@ -53,9 +55,9 @@ class Skyclick {
                 lastInteraction: string,
                 stayTime: number,
                 aproved: boolean,
-                metadata: string ): TInteraction {
+                metadata: string ): TH5PInteraction {
 
-        const result: TInteraction = {
+        const result: TH5PInteraction = {
             interactionID: 123,
             activityID: activityID,
             aproved: aproved,
