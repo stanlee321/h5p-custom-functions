@@ -16,9 +16,9 @@ export type TH5PAssignation = {
 }
 
 export type TH5PInteraction = {
-    interactionID : number; // PK
-    userID: number, // Skycklick user id
-    activityID:  number; // Skyclick ActivityID
+    h5pInteractionID : number; // PK
+    skyclickUserID: number, // Skycklick user id
+    skyclickActivityID:  number; // Skyclick ActivityID
     lastInteraction: string; // ISO Format datetime "2011-12-19T15:28:46.493Z"
     stayTime: number // total seconds for the activity
     aproved : boolean // if the Interaction ( activity to user) was approved

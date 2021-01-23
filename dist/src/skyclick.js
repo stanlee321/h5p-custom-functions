@@ -26,15 +26,15 @@ class Skyclick {
         };
         return result;
     }
-    setH5PInteraction(userID, activityID, lastInteraction, stayTime, aproved, metadata) {
+    setH5PInteraction(skyclickUserID, skyclickActivityID, lastInteraction, stayTime, aproved, metadata) {
         const result = {
-            interactionID: 123,
-            activityID: activityID,
+            h5pInteractionID: 123,
+            skyclickActivityID,
             aproved: aproved,
             lastInteraction: lastInteraction,
             metadata: metadata,
             stayTime: stayTime,
-            userID: userID,
+            skyclickUserID,
         };
         return result;
     }

@@ -26,8 +26,8 @@ const newActiviyAssignation = client.setH5PAssignation(argsAssing.skyclickUserID
 console.log("newActiviyAssignation: ", newActiviyAssignation);
 // case 2 
 const argsInteraction = {
-    userID: 1234,
-    activityID: 444,
+    skyclickUserID: 1234,
+    skyclickActivityID: 444,
     lastInteraction: new Date(2012, 0, 1).toDateString(),
     stayTime: 12344512,
     aproved: true,
@@ -36,7 +36,7 @@ const argsInteraction = {
         key2: "val2"
     })
 };
-const newInteraction = client.setH5PInteraction(argsInteraction.userID, argsInteraction.activityID, argsInteraction.lastInteraction, argsInteraction.stayTime, argsInteraction.aproved, argsInteraction.metadata);
+const newInteraction = client.setH5PInteraction(argsInteraction.skyclickUserID, argsInteraction.skyclickActivityID, argsInteraction.lastInteraction, argsInteraction.stayTime, argsInteraction.aproved, argsInteraction.metadata);
 console.log("newInteraction: ", newInteraction);
 // case 3
 const teacherProfile = client.getTeacherProfile(123);

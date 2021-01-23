@@ -50,21 +50,21 @@ class Skyclick {
         return result
     }
 
-    setH5PInteraction(userID: number, 
-                activityID: number,
+    setH5PInteraction(skyclickUserID: number, 
+        skyclickActivityID: number,
                 lastInteraction: string,
                 stayTime: number,
                 aproved: boolean,
                 metadata: string ): TH5PInteraction {
 
         const result: TH5PInteraction = {
-            interactionID: 123,
-            activityID: activityID,
+            h5pInteractionID: 123,
+            skyclickActivityID,
             aproved: aproved,
             lastInteraction: lastInteraction,
             metadata: metadata,
             stayTime: stayTime,
-            userID: userID,
+            skyclickUserID,
         }
         return result
     }

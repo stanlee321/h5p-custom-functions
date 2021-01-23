@@ -37,8 +37,8 @@ console.log("newActiviyAssignation: ", newActiviyAssignation)
 
 // case 2 
 const argsInteraction = {
-    userID: 1234,
-    activityID: 444,
+    skyclickUserID: 1234,
+    skyclickActivityID: 444,
     lastInteraction: new Date(2012, 0, 1).toDateString(),
     stayTime : 12344512,
     aproved: true,
@@ -48,8 +48,8 @@ const argsInteraction = {
     })
 }
 
-const newInteraction = client.setH5PInteraction(argsInteraction.userID,
-    argsInteraction.activityID,
+const newInteraction = client.setH5PInteraction(argsInteraction.skyclickUserID,
+    argsInteraction.skyclickActivityID,
     argsInteraction.lastInteraction,
     argsInteraction.stayTime,
     argsInteraction.aproved,
