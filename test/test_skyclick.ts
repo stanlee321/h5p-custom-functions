@@ -58,13 +58,13 @@ console.log("newInteraction: ", newInteraction)
 
 
 // case 3
-const teacherProfile = client.getH5PTeacherProfile(123)
+const teacherProfile = client.getTeacherProfile(123)
 console.log("teacherProfile: ", teacherProfile)
 
 // case 5
-const userProfile = client.getH5PUserProfile(123)
+const userProfile = client.getUserProfile(123)
 console.log("userProfile: ", userProfile)
 
 // case 6
-const activityProfile = client.getH5PActivityProfile(123)
+const activityProfile = client.getActivityProfile(123)
 console.log("activityProfile: ", activityProfile)

@@ -68,7 +68,7 @@ class Skyclick {
     }
     
 
-    getH5PActivityProfile(skyclickActivityID: number): TSkyclickActivity {
+    getActivityProfile(skyclickActivityID: number): TSkyclickActivity {
 
         const boardName = generateName()
         const courseID = getRandomInteger(1, 10000)
@@ -117,7 +117,7 @@ class Skyclick {
         return result
     }
 
-    getH5PTeacherProfile(teacherID: number): TSkyclickUser {
+    getTeacherProfile(teacherID: number): TSkyclickUser {
 
         const billingInfoId = getRandomInteger(1, 10000)
         const email = randomEmail()
@@ -175,7 +175,7 @@ class Skyclick {
         return result
     }
 
-    getH5PUserProfile(userID: number):TSkyclickUser {
+    getUserProfile(userID: number):TSkyclickUser {
         const billingInfoId = getRandomInteger(1, 10000)
         const email = randomEmail()
         const createdAt = randomDate(new Date(2012, 0, 1), new Date())

@@ -37,7 +37,7 @@ class Skyclick {
         };
         return result;
     }
-    getH5PActivityProfile(skyclickActivityID) {
+    getActivityProfile(skyclickActivityID) {
         const boardName = random_1.generateName();
         const courseID = random_1.getRandomInteger(1, 10000);
         const customWeakly = random_1.generateName();
@@ -82,7 +82,7 @@ class Skyclick {
         };
         return result;
     }
-    getH5PTeacherProfile(teacherID) {
+    getTeacherProfile(teacherID) {
         const billingInfoId = random_1.getRandomInteger(1, 10000);
         const email = random_1.randomEmail();
         const createdAt = random_1.randomDate(new Date(2012, 0, 1), new Date());
@@ -136,7 +136,7 @@ class Skyclick {
         };
         return result;
     }
-    getH5PUserProfile(userID) {
+    getUserProfile(userID) {
         const billingInfoId = random_1.getRandomInteger(1, 10000);
         const email = random_1.randomEmail();
         const createdAt = random_1.randomDate(new Date(2012, 0, 1), new Date());
